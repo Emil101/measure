@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_edit_profile_pro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:background="@mipmap/bg2"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.xorek.measurementbook.EditProfilePro"
+    tools:showIn="@layout/activity_edit_profile_pro">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@mipmap/pic14"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:id="@+id/imgv1"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgv"
+                    android:src="@drawable/upload"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#c0c0c0"
+                    android:layout_marginBottom="2dp"
+                    />
+            </FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgv1"
+            android:id="@+id/conDet"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="#83DCDCDC"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorRed"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="DETAILS"
+                />
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/conDet"
+                android:id="@+id/contact"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:paddingRight="5dp"
+                android:paddingEnd="5dp"
+                android:paddingTop="@dimen/activity_vertical_margin">
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameClient"
+                        android:textSize="18sp"
+                        android:text="Name : "
+                        />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@id/nameClient"
+                        android:layout_toRightOf="@id/nameClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/nameClient"
+                        android:id="@+id/nameClient_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/sexClient"
+                        android:text="Sex : "
+                        />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:layout_toEndOf="@id/sexClient"
+                        android:layout_toRightOf="@id/sexClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/sexClient"
+                        android:id="@+id/sexClient_val"
+                        />
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/phoneClient"
+                        android:text="Phone Number : "
+                        />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:layout_toEndOf="@id/phoneClient"
+                        android:layout_toRightOf="@id/phoneClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/phoneClient"
+                        android:id="@+id/phoneClient_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/dateClient"
+                        android:text="Date : "
+                        />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:layout_toEndOf="@id/dateClient"
+                        android:layout_toRightOf="@id/dateClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/dateClient"
+                        android:id="@+id/dateClient_val"
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deliverydateClient"
+                        android:textSize="18sp"
+                        android:text="Delivery Date : "
+                        />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="center_horizontal"
+                        android:layout_toEndOf="@id/deliverydateClient"
+                        android:layout_toRightOf="@id/deliverydateClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:onClick="setate"
+                        android:layout_alignBaseline="@id/deliverydateClient"
+                        android:id="@+id/deliverydateClient_val"
+                        />
+
+                </RelativeLayout>
+            </TableLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact"
+                android:id="@+id/measDet"
+                android:layout_centerHorizontal="true"
+                android:background="#83DCDCDC"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/colorRed"
+                android:text="MEASURMENT"
+                />
+            </RelativeLayout>
+
+            <TableLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/measDet"
+                android:orientation="vertical"
+                android:id="@+id/measurement">
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                     >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/style"
+                        android:text="Style : "
+                        />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:layout_toEndOf="@id/style"
+                        android:layout_toRightOf="@id/style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/style"
+                        android:id="@+id/style_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    >
+
+
+
+                    <TextView
+                        android:text="Neck Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/neckcirc" />
+
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="17sp"
+                        android:id="@+id/neckcirc_val"
+                        android:layout_toEndOf="@id/neckcirc"
+                        android:layout_toRightOf="@id/neckcirc"
+                        android:layout_alignBaseline="@id/neckcirc"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Burst Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/bustcirc" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/bustcirc"
+                        android:layout_toRightOf="@id/bustcirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/bustcirc"
+                        android:id="@+id/bustcirc_val"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Waist Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/waistcirc" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/waistcirc"
+                        android:layout_toRightOf="@id/waistcirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/waistcirc"
+                        android:id="@+id/waistcirc_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Hip Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/hipCirc" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/hipCirc"
+                        android:layout_toRightOf="@id/hipCirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/hipCirc"
+                        android:id="@+id/hipcirc_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Bust Height :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/bustheight" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/bustheight"
+                        android:layout_toRightOf="@id/bustheight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/bustheight"
+                        android:id="@+id/bustHeight_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="ArmHole Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/armholecirc" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/armholecirc"
+                        android:layout_toRightOf="@id/armholecirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/armholecirc"
+                        android:id="@+id/armholecirc_val"
+                        />
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Front Waist Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/frontwaistlength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/frontwaistlength"
+                        android:layout_toRightOf="@id/frontwaistlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/frontwaistlength"
+                        android:id="@+id/frontwaistlength_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Hip Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/hiplength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/hiplength"
+                        android:layout_toRightOf="@id/hiplength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/hiplength"
+                        android:textSize="17sp"
+                        android:id="@+id/hiplength_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Elbow Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/elbowlength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/elbowlength"
+                        android:layout_toRightOf="@id/elbowlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/elbowlength"
+                        android:id="@+id/elbowlength_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Sleeve Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/sleevelength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/sleevelength"
+                        android:layout_toRightOf="@id/sleevelength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/sleevelength"
+                        android:id="@+id/sleevelength_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Back Waist Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/backwaistlength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/backwaistlength"
+                        android:layout_toRightOf="@id/backwaistlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/backwaistlength"
+                        android:id="@+id/backwaistlength_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Shoulder Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/shoulderLenth" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/shoulderLenth"
+                        android:layout_toRightOf="@id/shoulderLenth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/shoulderLenth"
+                        android:id="@+id/shoulderLenth_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Back Width :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/backwidth" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/backwidth"
+                        android:layout_toRightOf="@id/backwidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/backwidth"
+                        android:id="@+id/backwidth_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Knee Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/kneelength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/kneelength"
+                        android:layout_toRightOf="@id/kneelength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/kneelength"
+                        android:id="@+id/kneelength_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Breast Distance :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/breastdistance" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/breastdistance"
+                        android:layout_toRightOf="@id/breastdistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/breastdistance"
+                        android:id="@+id/breastdistance_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Under Bust Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/underbustcirc" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/underbustcirc"
+                        android:layout_toRightOf="@id/underbustcirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/underbustcirc"
+                        android:id="@+id/underbustcirc_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Under Bust Height :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/underbustheight" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/underbustheight"
+                        android:layout_toRightOf="@id/underbustheight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/underbustheight"
+                        android:id="@+id/underbustheight_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Rise Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/riselength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/riselength"
+                        android:layout_toRightOf="@id/riselength"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/riselength"
+                        android:id="@+id/riselength_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Trouser Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/trouserlength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/trouserlength"
+                        android:layout_toRightOf="@id/trouserlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/trouserlength"
+                        android:id="@+id/trouserlength_val"
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Floor Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/floorlength" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/floorlength"
+                        android:layout_toRightOf="@id/floorlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/floorlength"
+                        android:id="@+id/floorlength_val"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Strapless Neckline Circ.⁠⁠⁠⁠ :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/straplessnecklinecirc⁠⁠⁠⁠" />
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/straplessnecklinecirc⁠⁠⁠⁠"
+                        android:layout_toRightOf="@id/straplessnecklinecirc⁠⁠⁠⁠"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/straplessnecklinecirc⁠⁠⁠⁠"
+                        android:id="@+id/straplessnecklinecirc⁠⁠⁠⁠_val"
+                        />
+                </RelativeLayout>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/measurement"
+                android:clickable="true"
+                android:textSize="17sp"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="1dp"
+                android:paddingRight="1dp"
+                android:text="Notes >"/>
+
+                <LinearLayout
+                    android:layout_below="@id/textview"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/text"
+                        android:hint="Put other measurements or description here"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="19sp"
+                        android:lines="8"
+                        android:minLines="6"
+                        android:padding="10dp"
+                        android:paddingLeft="10dp"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

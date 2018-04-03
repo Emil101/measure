@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_measure"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.xorek.measurementbook.Measure"
+    android:background="@mipmap/bg2"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:showIn="@layout/activity_measure">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:id="@+id/measurement">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@mipmap/pic14"
+                android:gravity="center"
+                android:id="@+id/imgv1"
+                android:layout_marginBottom="5dp"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/imgv"
+                    android:onClick="selectImage"
+                    android:src="@drawable/upload"
+                    android:layout_marginBottom="2dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#c0c0c0"
+                    />
+                <!--<com.mikhaellopez.circularimageview.CircularImageView-->
+                    <!--android:layout_width="200dp"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:id="@+id/imgv"-->
+                    <!--android:src="@drawable/upload"-->
+                    <!--android:layout_marginBottom="2dp"-->
+                    <!--app:civ_border_width="1dp"-->
+                    <!--app:civ_border_color="#c0c0c0"-->
+                    <!--app:civ_shadow="true"-->
+                    <!--app:civ_shadow_radius="2"-->
+                    <!--app:civ_shadow_color="@color/colorash"/>-->
+
+            </LinearLayout>
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:text="STYLE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="18sp"
+                        android:id="@+id/style" />
+
+                    <EditText
+                        android:layout_below="@id/style"
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="10dp"
+                        android:inputType="textCapWords"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="17sp"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:id="@+id/style_val"
+                        />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card2"
+                    android:layout_margin="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+
+                        <TextView
+                            android:text="Neck Circ."
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/neckcirc" />
+
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:background="@drawable/rounded_corner2"
+                            android:paddingBottom="10dp"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="17sp"
+                            android:paddingTop="10dp"
+                            android:textStyle="bold"
+                            android:id="@+id/neckcirc_val"
+                            android:layout_below="@id/neckcirc"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card3"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+
+                        <TextView
+                            android:text="Burst Circ."
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/bustcirc" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="17sp"
+                            android:paddingTop="10dp"
+                            android:imeOptions="actionNext"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:layout_below="@id/bustcirc"
+                            android:id="@+id/bustcirc_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card4"
+                    android:layout_margin="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+
+                        <TextView
+                            android:text="Waist Circ."
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/waistcirc" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:layout_below="@id/waistcirc"
+                            android:id="@+id/waistcirc_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card5"
+                    android:layout_margin="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:text="Hip Circ."
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/hipCirc" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:paddingTop="10dp"
+                            android:layout_below="@id/hipCirc"
+                            android:id="@+id/hipcirc_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card6"
+                    android:layout_margin="5dp"
+                    android:layout_width="100dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Bust Height"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/bustheight" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:layout_below="@id/bustheight"
+                            android:id="@+id/bustHeight_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card7"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="ArmHole Circ."
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/armholecirc" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/rounded_corner2"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/armholecirc"
+                            android:id="@+id/armholecirc_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card8"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Front Waist Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/frontwaistlength" />
+                        <EditText
+                            android:background="@drawable/rounded_corner2"
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:paddingTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/frontwaistlength"
+                            android:id="@+id/frontwaistlength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card9"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Hip Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/hiplength" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/hiplength"
+                            android:textSize="17sp"
+                            android:paddingTop="10dp"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:id="@+id/hiplength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card10"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Elbow Length"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:id="@+id/elbowlength" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:background="@drawable/rounded_corner2"
+                            android:layout_below="@id/elbowlength"
+                            android:id="@+id/elbowlength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card11"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Sleeve Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/sleevelength" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/rounded_corner2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/sleevelength"
+                            android:id="@+id/sleevelength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card12"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Back Waist Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/backwaistlength" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/rounded_corner2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:paddingTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/backwaistlength"
+                            android:id="@+id/backwaistlength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+
+                        <TextView
+                            android:text="Shoulder Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/shoulderLenth" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:layout_below="@id/shoulderLenth"
+                            android:id="@+id/shoulderLenth_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card13"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+
+                        <TextView
+                            android:text="Back Width "
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/backwidth" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingTop="10dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/backwidth"
+                            android:background="@drawable/rounded_corner2"
+                            android:id="@+id/backwidth_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card14"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Knee Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/kneelength" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:paddingTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/rounded_corner2"
+                            android:layout_below="@id/kneelength"
+                            android:id="@+id/kneelength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card15"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Breast Distance"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/breastdistance" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:imeOptions="actionNext"
+                            android:paddingTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/breastdistance"
+                            android:background="@drawable/rounded_corner2"
+                            android:id="@+id/breastdistance_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card16"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+                        <TextView
+                            android:text="Under Bust Circ."
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/underbustcirc" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:paddingTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/underbustcirc"
+                            android:background="@drawable/rounded_corner2"
+                            android:id="@+id/underbustcirc_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card17"
+                    android:layout_margin="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+
+                        <TextView
+                            android:text="Under Bust Height"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/underbustheight" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:paddingTop="10dp"
+                            android:layout_below="@id/underbustheight"
+                            android:id="@+id/underbustheight_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card18"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Rise Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/riselength" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="15dp"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:inputType="numberDecimal"
+                            android:layout_below="@id/riselength"
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/rounded_corner2"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:id="@+id/riselength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card19"
+                    android:layout_margin="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="Trouser Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/trouserlength" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:imeOptions="actionNext"
+                            android:layout_centerHorizontal="true"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:paddingTop="10dp"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:layout_below="@id/trouserlength"
+                            android:id="@+id/trouserlength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card20"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+
+                        <TextView
+                            android:text="Floor Length"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/floorlength" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:imeOptions="actionNext"
+                            android:layout_centerHorizontal="true"
+                            android:inputType="numberDecimal"
+                            android:layout_below="@id/floorlength"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/rounded_corner2"
+                            android:id="@+id/floorlength_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card21"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+
+                        <TextView
+                            android:text="Strapless Neckline Circ.⁠⁠⁠⁠"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/straplessnecklinecirc⁠⁠⁠⁠" />
+                        <EditText
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingTop="10dp"
+                            android:background="@drawable/rounded_corner2"
+                            android:textStyle="bold"
+                            android:imeOptions="actionNext"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:layout_below="@id/straplessnecklinecirc⁠⁠⁠⁠"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:id="@+id/straplessnecklinecirc⁠⁠⁠⁠_val"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card0"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+
+
+                    <TextView
+                        android:text="Notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/note" />
+
+                    <EditText
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:imeOptions="actionDone"
+                        android:paddingBottom="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:lines="8"
+                        android:minLines="6"
+                        android:id="@+id/note_val"
+                        android:layout_below="@id/note"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameClient_val"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneClient_val"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateClient_val"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliverydateClient_val"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sexClient_val"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>

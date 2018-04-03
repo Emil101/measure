@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_contact_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    android:background="@mipmap/bg2"
+    tools:context="com.xorek.measurementbook.Contact_detail"
+    tools:showIn="@layout/activity_contact_detail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_text"
+        android:id="@+id/logo1"
+        />
+    </FrameLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:drawableStart="@drawable/name_icon"
+            android:drawableLeft="@drawable/name_icon"
+            android:drawablePadding="5dp"
+            android:id="@+id/fnames"
+            android:maxLines="1"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:ems="15"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:buttonTint="@color/colorRed"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorRed"
+                android:text="Male"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/con3"
+        android:padding="2dp"
+        android:weightSum="2">
+
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/telphs"
+            android:textColor="@color/colorBlack"
+            android:maxLines="1"
+            android:drawableStart="@drawable/phone"
+            android:drawableLeft="@drawable/phone"
+            android:drawablePadding="5dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:ems="10"
+            android:hint="Phone Number"
+            />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_contactnum"
+        android:layout_weight="0.5"
+        android:clickable="true"
+        android:onClick="contPick"
+        android:id="@+id/im1"
+        />
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/date"
+            android:maxLines="1"
+            android:drawableStart="@drawable/date"
+            android:drawableLeft="@drawable/date"
+            android:drawablePadding="5dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:inputType="date"
+            android:ems="10"
+            android:hint="Date"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/deliveryDate"
+            android:maxLines="1"
+            android:drawableStart="@drawable/delivery_date"
+            android:drawableLeft="@drawable/delivery_date"
+            android:drawablePadding="5dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:ems="10"
+            android:textColor="@color/colorBlack"
+            android:onClick="setDate"
+            android:hint="Delivery Date"
+            />
+    <View
+        android:layout_width="1.5dp"
+        android:layout_height="fill_parent"
+        android:background="#d9000000"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/deliveryTime"
+        android:maxLines="1"
+        android:drawableStart="@drawable/delivery_date"
+        android:drawableLeft="@drawable/delivery_date"
+        android:drawablePadding="5dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/colorBlack"
+        android:onClick="setTime"
+        android:hint="Time"
+        />
+
+
+
+</LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#d9000000"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/reminder"
+        android:maxLines="1"
+        android:drawableStart="@drawable/delivery_date"
+        android:drawableLeft="@drawable/delivery_date"
+        android:drawablePadding="5dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/colorBlack"
+        android:onClick="setTime"
+        android:hint="Set Reminder"
+        />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#d9000000"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

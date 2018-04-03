@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Measurement Book</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_measurement">measurement</string>
+    <string name="title_activity_contact_detail">Contact_detail</string>
+    <string name="title_activity_measurement_book">Measurement Book</string>
+    <string name="title_activity_main_measure">Measurement Book</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
+    <string name="title_activity_profilepro">Profilepro</string>
+    <string name="contact"><u><![CDATA[- CONTACT >]]></u></string>
+    <string name="measurement"><u><![CDATA[- MEASUREMENT >]]></u></string>
+    <string name="notes"><u><![CDATA[- NOTES >]]></u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_edit_profile_pro">EditProfilePro</string>
+    <string name="title_activity_picture">picture</string>
+</resources>

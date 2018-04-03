@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_measurement"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="3dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.xorek.measurementbook.Profile"
+    android:background="@mipmap/bg2"
+    tools:showIn="@layout/activity_measurement">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:id="@+id/imgv1"
+                android:layout_marginBottom="18dp"
+                android:layout_marginTop="18dp"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="190dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/imgv"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_action_pic"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignTop="@+id/imgv1"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#c0c0c0"
+                    />
+
+            </FrameLayout>
+
+            <View
+                android:layout_below="@id/imgv1"
+                android:id="@+id/line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:clickable="true"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:onClick="doToggleView1"
+                android:text="@string/contact"/>
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview2"
+                app:ael_expanded="false"
+                app:ael_duration="500"
+                app:ael_interpolator="fastOutLinearIn"
+                app:ael_orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp">
+                    <TableRow
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/nameClient"
+                            android:textSize="18sp"
+                            android:text="Name : "
+                            />
+                        <TextView
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_toEndOf="@id/nameClient"
+                            android:layout_toRightOf="@id/nameClient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="17sp"
+                            android:layout_alignBaseline="@id/nameClient"
+                            android:id="@+id/nameClient_val"
+                            />
+
+                    </TableRow>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#c0c0c0"/>
+
+                    <TableRow
+                        android:paddingTop="5dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/sexClient"
+                            android:text="Sex : "
+                            />
+                        <TextView
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:layout_toEndOf="@id/dateClient"
+                            android:layout_toRightOf="@id/dateClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_alignBaseline="@id/dateClient"
+                            android:id="@+id/sexClient_val"
+                            />
+                    </TableRow>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#c0c0c0"/>
+
+                    <TableRow
+                        android:paddingTop="5dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/phoneClient"
+                            android:text="Phone Number : "
+                            />
+                        <TextView
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:layout_toEndOf="@id/phoneClient"
+                            android:layout_toRightOf="@id/phoneClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_alignBaseline="@id/phoneClient"
+                            android:id="@+id/phoneClient_val"
+                            />
+                    </TableRow>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#c0c0c0"/>
+
+                    <TableRow
+                        android:paddingTop="5dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/dateClient"
+                            android:text="Date : "
+                            />
+                        <TextView
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="10dp"
+                            android:layout_toEndOf="@id/dateClient"
+                            android:layout_toRightOf="@id/dateClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_alignBaseline="@id/dateClient"
+                            android:id="@+id/dateClient_val"
+                            />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#c0c0c0"/>
+
+
+                    <TableRow
+                        android:paddingTop="5dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/deliverydateClient"
+                            android:textSize="18sp"
+                            android:text="Delivery Date : "
+                            />
+                        <TextView
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:layout_toEndOf="@id/deliverydateClient"
+                            android:layout_toRightOf="@id/deliverydateClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_alignBaseline="@id/deliverydateClient"
+                            android:id="@+id/deliverydateClient_val"
+                            />
+                    </TableRow>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#c0c0c0"/>
+
+                </TableLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandableLayout2"
+                android:clickable="true"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:onClick="doToggleView2"
+                android:text="@string/measurement"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview1"
+                app:ael_expanded="false"
+                app:ael_duration="500"
+                app:ael_interpolator="fastOutLinearIn"
+                app:ael_orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:id="@+id/measurement">
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    >
+
+
+
+                    <TextView
+                        android:text="Style :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/style" />
+
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:id="@+id/style_val"
+                        android:layout_toEndOf="@id/style"
+                        android:layout_toRightOf="@id/style"
+                        android:layout_alignBaseline="@id/style"/>
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+
+
+                    <TextView
+                        android:text="Neck Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/neckcirc" />
+
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:id="@+id/neckcirc_val"
+                        android:layout_toEndOf="@id/neckcirc"
+                        android:layout_toRightOf="@id/neckcirc"
+                        android:layout_alignBaseline="@id/neckcirc"/>
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Burst Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/bustcirc" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/bustcirc"
+                        android:layout_toRightOf="@id/bustcirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/bustcirc"
+                        android:id="@+id/bustcirc_val"
+                        />
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Waist Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/waistcirc" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/waistcirc"
+                        android:layout_toRightOf="@id/waistcirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/waistcirc"
+                        android:id="@+id/waistcirc_val"
+                        />
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Hip Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/hipCirc" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/hipCirc"
+                        android:layout_toRightOf="@id/hipCirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/hipCirc"
+                        android:id="@+id/hipcirc_val"
+                        />
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Bust Height :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/bustheight" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/bustheight"
+                        android:layout_toRightOf="@id/bustheight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/bustheight"
+                        android:id="@+id/bustHeight_val"
+                        />
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="ArmHole Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/armholecirc" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/armholecirc"
+                        android:layout_toRightOf="@id/armholecirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/armholecirc"
+                        android:id="@+id/armholecirc_val"
+                        />
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Front Waist Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/frontwaistlength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/frontwaistlength"
+                        android:layout_toRightOf="@id/frontwaistlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/frontwaistlength"
+                        android:id="@+id/frontwaistlength_val"
+                        />
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Hip Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/hiplength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/hiplength"
+                        android:layout_toRightOf="@id/hiplength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/hiplength"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:id="@+id/hiplength_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Elbow Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/elbowlength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/elbowlength"
+                        android:layout_toRightOf="@id/elbowlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/elbowlength"
+                        android:id="@+id/elbowlength_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Sleeve Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/sleevelength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/sleevelength"
+                        android:layout_toRightOf="@id/sleevelength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/sleevelength"
+                        android:id="@+id/sleevelength_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Back Waist Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/backwaistlength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/backwaistlength"
+                        android:layout_toRightOf="@id/backwaistlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/backwaistlength"
+                        android:id="@+id/backwaistlength_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Shoulder Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/shoulderLenth" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/shoulderLenth"
+                        android:layout_toRightOf="@id/shoulderLenth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/shoulderLenth"
+                        android:id="@+id/shoulderLenth_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Back Width :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/backwidth" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/backwidth"
+                        android:layout_toRightOf="@id/backwidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/backwidth"
+                        android:id="@+id/backwidth_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Knee Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/kneelength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/kneelength"
+                        android:layout_toRightOf="@id/kneelength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/kneelength"
+                        android:id="@+id/kneelength_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Breast Distance :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/breastdistance" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/breastdistance"
+                        android:layout_toRightOf="@id/breastdistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/breastdistance"
+                        android:id="@+id/breastdistance_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Under Bust Circ. :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/underbustcirc" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/underbustcirc"
+                        android:layout_toRightOf="@id/underbustcirc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/underbustcirc"
+                        android:id="@+id/underbustcirc_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Under Bust Height :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/underbustheight" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/underbustheight"
+                        android:layout_toRightOf="@id/underbustheight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/underbustheight"
+                        android:id="@+id/underbustheight_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Rise Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/riselength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/riselength"
+                        android:layout_toRightOf="@id/riselength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/riselength"
+                        android:id="@+id/riselength_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Trouser Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/trouserlength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/trouserlength"
+                        android:layout_toRightOf="@id/trouserlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/trouserlength"
+                        android:id="@+id/trouserlength_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Floor Length :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/floorlength" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/floorlength"
+                        android:layout_toRightOf="@id/floorlength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@id/floorlength"
+                        android:id="@+id/floorlength_val"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:text="Strapless Neckline Circ.⁠⁠⁠⁠ :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/straplessnecklinecirc⁠⁠⁠⁠" />
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toEndOf="@id/straplessnecklinecirc⁠⁠⁠⁠"
+                        android:layout_toRightOf="@id/straplessnecklinecirc⁠⁠⁠⁠"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_alignBaseline="@id/straplessnecklinecirc⁠⁠⁠⁠"
+                        android:id="@+id/straplessnecklinecirc⁠⁠⁠⁠_val"
+                        />
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+            </TableLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandableLayout1"
+                android:clickable="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="doToggleView"
+                android:text="@string/notes"/>
+
+
+
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview"
+                app:ael_expanded="false"
+                app:ael_duration="500"
+                app:ael_interpolator="fastOutLinearIn"
+                app:ael_orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textSize="15dp"
+                        android:paddingLeft="10dp"/>
+
+
+
+                </LinearLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

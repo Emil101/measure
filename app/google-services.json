@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "420076581010",
+    "firebase_url": "https://measurementbook-bf970.firebaseio.com",
+    "project_id": "measurementbook-bf970",
+    "storage_bucket": "measurementbook-bf970.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420076581010:android:5d67a314834b855f",
+        "android_client_info": {
+          "package_name": "com.xorek.measurementbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420076581010-59bkph955f1g933qt8cp9bmqdl8kc6ou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xorek.measurementbook",
+            "certificate_hash": "1a16d3cbc0ac7e980c8fe21d23f41209960b07b2"
+          }
+        },
+        {
+          "client_id": "420076581010-54v43qb3h7mska8ga54su1cciep3qu81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAEGQjZDs6gh5Tdy6WwC8alvmDFivYXIc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420076581010-54v43qb3h7mska8ga54su1cciep3qu81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
